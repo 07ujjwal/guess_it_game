@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./fevicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./fevicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./fevicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./fevicon/site.webmanifest" />
+    <title>Guess_it!</title>
+  </head>
+  <body>
+    <nav>
+      <p class="msg_welcome">Hey! Good to 👀 You</p>
+      <form class="input_Form">
+        <fieldset>
+          <legend>Select the difficulty level</legend>
+          <div class="radio_nav">
+            <input
+              type="radio"
+              id="gameType-1"
+              name="game_type"
+              value="easy"
+              checked
+            />
+            <label for="gameType-1">Easy</label>
+          </div>
+
+          <div class="radio_nav">
+            <input
+              type="radio"
+              id="gameType-2"
+              name="game_type"
+              value="medium"
+            />
+            <label for="gameType-2">Medium</label>
+          </div>
+
+          <div class="radio_nav">
+            <input type="radio" id="gameType-3" name="game_type" value="hard" />
+            <label for="gameType-3">Hard</label>
+          </div>
+
+          <button class="btn_nav" type="submit">Lets Play!</button>
+        </fieldset>
+      </form>
+      <pre id="log"></pre>
+    </nav>
+
+    <main class="app hidden">
+      <section class="top">
+        <h1>Guess the number</h1>
+        <div class="between"></div>
+        <button class="back btn">Back &lArr;</button>
+        <button class="reset btn">Restart!</button>
+        <div class="num_box">?</div>
+      </section>
+
+      <section class="bottom">
+        <div class="left">
+          <h2>Hints</h2>
+          <div class="hint_box"></div>
+        </div>
+
+        <div class="middle">
+          <input type="number" class="guess" />
+          <button class="btn Check">Check!</button>
+        </div>
+
+        <div class="right">
+          <p class="message">Start guessing...</p>
+          <p class="current-score">✔ Score: <span class="score">20</span></p>
+          <p class="high-score">
+            🥇 Highscore: <span class="highscore">0</span>
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
